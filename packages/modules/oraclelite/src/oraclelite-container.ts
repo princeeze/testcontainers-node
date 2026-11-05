@@ -134,7 +134,7 @@ async function createApplicationUser(
     "ALTER PROFILE DEFAULT LIMIT PASSWORD_VERIFY_FUNCTION NULL;",
     // Lite image has no USERS tablespace; the quota statement below requires one.
     "CREATE TABLESPACE USERS DATAFILE '/opt/oracle/oradata/FREE/FREEPDB1/users01.dbf' SIZE 10M AUTOEXTEND ON;",
-    `CREATE USER ${oracleUser} IDENTIFIED BY "${quotedPassword}";`,
+    `CREATE USER ${oracleUser} IDENTIFIED BY "${quotedPassword}" DEFAULT TABLESPACE USERS;`,
     `GRANT DB_DEVELOPER_ROLE TO ${oracleUser};`,
     `ALTER USER ${oracleUser} QUOTA UNLIMITED ON USERS;`,
     "EXIT",
