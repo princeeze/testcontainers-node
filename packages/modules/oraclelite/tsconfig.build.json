@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "incremental": false,
+    "composite": false,
+    "lib": ["ES2023"],
+    "target": "ES2023",
+    "module": "nodenext",
+    "declaration": true,
+    "strict": true,
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    "rootDir": "src",
+    "outDir": "build"
+  },
+  "include": ["src/index.ts", "src/oraclelite-container.ts"]
+}

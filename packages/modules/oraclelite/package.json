@@ -1,0 +1,41 @@
+{
+  "name": "@princeeze/oracle-lite",
+  "version": "12.2.1",
+  "license": "MIT",
+  "keywords": [
+    "oracle",
+    "database",
+    "testing",
+    "docker",
+    "testcontainers"
+  ],
+  "description": "Oracle Database Free Lite module for Testcontainers",
+  "homepage": "https://github.com/princeeze/testcontainers-node",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/princeeze/testcontainers-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/princeeze/testcontainers-node/issues"
+  },
+  "main": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepack": "shx cp ../../../README.md . && shx cp ../../../LICENSE .",
+    "build": "tsc --project tsconfig.build.json",
+    "prepare": "tsc --project tsconfig.build.json"
+  },
+  "dependencies": {
+    "testcontainers": "^12.2.1"
+  },
+  "devDependencies": {
+    "@types/oracledb": "^7.0.3",
+    "oracledb": "^26.0.0",
+    "typescript": "^7.0.2"
+  }
+}
