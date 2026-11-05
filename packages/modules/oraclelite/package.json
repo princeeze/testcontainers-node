@@ -27,8 +27,7 @@
   },
   "scripts": {
     "prepack": "shx cp ../../../README.md . && shx cp ../../../LICENSE .",
-    "build": "tsc --project tsconfig.build.json",
-    "prepare": "tsc --project tsconfig.build.json"
+    "build": "tsc --project tsconfig.build.json"
   },
   "dependencies": {
     "testcontainers": "^12.2.1"
